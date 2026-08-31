@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stock Inventory Tracker</string>
+    <string name="developer_name">PAN YAOXIANG</string>
+    <string name="student_id">S1041399</string>
+    <string name="module_name">CN6035 Mobile and Distributed Systems</string>
+    <string name="client_company">Stock Inventory Tracker</string>
+    <string name="version_label">Version 1.0</string>
+</resources>
