@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Name: PAN YAOXIANG, SID: S1041399 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".AboutActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_app_logo"
+                android:contentDescription="Stock Inventory Tracker logo" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Stock Inventory Tracker" android:textSize="25sp" android:textStyle="bold" android:textColor="@color/green_dark" android:layout_marginTop="8dp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Internal Stock Management Application" android:textColor="@color/text_secondary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_card">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Project Information" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/green_dark" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Client / Company: Stock Inventory Tracker\n\nDeveloped by: PAN YAOXIANG\nStudent ID: S1041399\nModule: CN6035 Mobile and Distributed Systems\nLecturer: Mr Loh Hai Kian\nVersion: 1.0" android:textColor="@color/text_primary" android:lineSpacingExtra="3dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_card">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Purpose" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/green_dark" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="The application replaces a manual Excel-based process. Employees can monitor stock, add or remove quantities, record the responsible staff member, review an audit log, and view monthly stock changes." android:textColor="@color/text_primary" android:lineSpacingExtra="3dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_card">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Technology" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/green_dark" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Android Studio • Java • XML • SQLite • Custom Canvas chart\nNo login, payment, or messaging features are included because they were outside the client scope." android:textColor="@color/text_primary" android:lineSpacingExtra="3dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom_nav" />
+</LinearLayout>
