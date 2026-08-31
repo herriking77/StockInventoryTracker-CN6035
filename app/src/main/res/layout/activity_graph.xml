@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Name: PAN YAOXIANG, SID: S1041399 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".GraphActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Monthly Stock Graph" android:textSize="25sp" android:textStyle="bold" android:textColor="@color/green_dark" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Track daily stock levels for a selected product and month." android:textColor="@color/text_secondary" android:layout_marginBottom="14dp" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Product" android:textStyle="bold" />
+            <Spinner android:id="@+id/graphProductSpinner" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Month" android:textStyle="bold" android:layout_marginTop="10dp" />
+            <Spinner android:id="@+id/graphMonthSpinner" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" />
+
+            <com.example.stockinventorytracker.StockChartView
+                android:id="@+id/stockChartView"
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:weightSum="4">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="82dp" android:layout_weight="1" android:layout_marginRight="3dp" android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_card">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Opening" android:textSize="11sp" android:textColor="@color/text_secondary" />
+                    <TextView android:id="@+id/openingStockText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/green_primary" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="82dp" android:layout_weight="1" android:layout_marginLeft="3dp" android:layout_marginRight="3dp" android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_card">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Highest" android:textSize="11sp" android:textColor="@color/text_secondary" />
+                    <TextView android:id="@+id/highestStockText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/green_primary" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="82dp" android:layout_weight="1" android:layout_marginLeft="3dp" android:layout_marginRight="3dp" android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_card">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lowest" android:textSize="11sp" android:textColor="@color/text_secondary" />
+                    <TextView android:id="@+id/lowestStockText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/amber" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="82dp" android:layout_weight="1" android:layout_marginLeft="3dp" android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_card">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Closing" android:textSize="11sp" android:textColor="@color/text_secondary" />
+                    <TextView android:id="@+id/closingStockText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/green_primary" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/graphNoteText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="The line represents the end-of-day stock level."
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom_nav" />
+</LinearLayout>
